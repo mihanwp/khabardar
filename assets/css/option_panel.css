@@ -1,0 +1,254 @@
+.mihanwp_notification_bar_option_panel_wrapper .hide
+{
+    display: none;
+}
+.mihanwp_notification_bar_option_panel_wrapper .mihanwp_notification_bar_preview
+{
+    width: 800px;
+    height: 100px;
+    position: fixed;
+    border-radius: 5px;
+}
+.mihanwp_notification_bar_option_panel_wrapper .mihanwp_notification_bar_preview.mw_rtl
+{
+    left: 50px;
+}
+.mihanwp_notification_bar_option_panel_wrapper .mihanwp_notification_bar_preview.mw_ltr
+{
+    right: 50px;
+}
+.mihanwp_notification_bar_option_panel .tabs ul
+{
+    margin: 0;
+}
+.mihanwp_notification_bar_option_panel .tabs ul li
+{
+    display: inline-block;
+    margin: 0;
+}
+.mihanwp_notification_bar_option_panel .tabs ul li.active
+{
+    background-color: #eaeaea;
+}
+.mihanwp_notification_bar_option_panel .tabs ul li a
+{
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+.mihanwp_notification_bar_option_panel .tab_content
+{
+    background-color: #eaeaee;
+    padding: 10px;
+}
+#mihanwp_notification_bar_content
+{
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 3fr 1fr;
+}
+#mihanwp_notification_bar_content #mihanwp_notification_bar_button a
+{
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+.mihanwp_notification_bar_bg_position_preview
+{
+    direction: ltr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 500px;
+}
+.mihanwp_notification_bar_bg_position_preview span
+{
+    display: block;
+    background-color: #d3d3d3;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mihanwp_notification_bar_bg_position_preview label
+{
+    background-color: #e2e2e2;
+    padding: 20px;
+    border: 1px solid #d4d4d4;
+    position: relative;
+}
+.mihanwp_notification_bar_bg_position_preview label:hover
+{
+    background-color: #d3d3d3;
+}
+.mihanwp_notification_bar_bg_position_preview label::after
+{
+    content: '';
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #d4d4d4;
+    position: absolute;
+}
+.mihanwp_notification_bar_bg_position_preview label:hover::after
+{
+    background-color: #bbbbbb;
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(1)::after
+{
+    left: 0;
+    top: 0;
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(2)::after
+{
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(3)::after
+{
+    right: 0;
+    top: 0;
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(4)::after
+{
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(5)::after
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(6)::after
+{
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(7)::after
+{
+    left: 0;
+    bottom: 0;
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(8)::after
+{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mihanwp_notification_bar_bg_position_preview label:nth-of-type(9)::after
+{
+    bottom: 0;
+    right: 0;
+}
+.mihanwp_notification_bar_bg_position_preview input[type=radio]
+{
+    display: none;
+}
+.mihanwp_notification_bar_bg_position_preview input[type=radio]:checked + label
+{
+    background-color: #d4d4d4;
+}
+.mihanwp_notification_bar_bg_position_preview input[type=radio]:checked + label::after
+{
+    background-color: #bbbbbb;
+}
+.mihanwp_notification_bar_option_panel input[type=range]
+{
+    -webkit-appearance: none;
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    height: 5px;
+    background-color: transparent;
+}
+.mihanwp_notification_bar_option_panel input[type=range]:focus
+{
+    outline: none;
+}
+.mihanwp_notification_bar_option_panel input[type=range]::-webkit-slider-runnable-track
+{
+    width: 100%;
+    height: 100%;
+    background: #1ea7bc;
+    position: relative;
+    border-radius: 100px;
+}
+.mihanwp_notification_bar_option_panel input[type=range]::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #1ea7bc;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mihanwp_notification_bar_option_panel input[type=range]:focus::-webkit-slider-thumb
+{
+    background-color: #1e73be;
+}
+.mihanwp_notification_bar_option_panel input[type=range]::-moz-range-track
+{
+    height: 100%;
+    border-radius: 100px;
+    background-color: #d4d4d4;
+}
+.mihanwp_notification_bar_option_panel input[type=range]::-moz-range-thumb
+{
+    cursor: pointer;
+    background-color: #1ea7bc;
+    border: none;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.mihanwp_notification_bar_option_panel input[type=range]::-moz-range-progress
+{
+    background-color: #1ea7bc;
+}
+.mihanwp_notification_bar_option_panel input[type=range]::-moz-focus-outer
+{
+    border: none;
+}
+.mihanwp_notification_bar_option_panel #mihanwp_notification_bar_count_down_content_description span
+{
+    display: block;
+}
+.mihanwp_notification_bar_option_panel_wrapper #mihanwp_notification_bar_content .mihanwp_notification_bar_close
+{
+    background-color: orange;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    cursor: pointer;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mihanwp_notification_bar_option_panel_wrapper .mihanwp_notification_bar_preview #mihanwp_notification_bar_content .mihanwp_notification_bar_close::after
+{
+    content: '\00d7';
+    font-size: 20px;
+    font-weight: bold;
+}
+.mihanwp_notification_bar_option_panel_wrapper .mihanwp_notification_bar_preview.mw_ltr #mihanwp_notification_bar_content .mihanwp_notification_bar_close
+{
+    left: -40px;
+}

@@ -1,0 +1,106 @@
+.mihanwp_notification_bar_box_wrapper
+{
+    width: 100%;
+    position: relative;
+    z-index: 9999;
+}
+.mihanwp_notification_bar_box_wrapper p
+{
+    margin: 0;
+}
+.mihanwp_notification_bar_box_wrapper.mihanwp_notification_bar_rtl .mihanwp_notification_bar_content
+{
+    direction: rtl;
+}
+.mihanwp_notification_bar_box_wrapper.mihanwp_notification_bar_ltr .mihanwp_notification_bar_content
+{
+    direction: ltr;
+}
+.mihanwp_notification_bar_content
+{
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.mihanwp_notification_bar_content > div
+{
+    flex: auto;
+}
+.mihanwp_notification_bar_box_wrapper.mihanwp_notification_bar_rtl .mihanwp_notification_bar_button
+{
+    text-align: left;
+}
+.mihanwp_notification_bar_box_wrapper.mihanwp_notification_bar_ltr .mihanwp_notification_bar_button
+{
+    text-align: right;
+}
+.mihanwp_notification_bar_box_wrapper .mihanwp_notification_bar_button a
+{
+    padding: 15px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.mihanwp_notification_bar_box_wrapper .mihanwp_notification_bar_close
+{
+    background-color: orange;
+    border-radius: 3px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mihanwp_notification_bar_box_wrapper.mihanwp_notification_bar_rtl .mihanwp_notification_bar_close
+{
+    margin-left: 10px;
+}
+.mihanwp_notification_bar_box_wrapper.mihanwp_notification_bar_ltr .mihanwp_notification_bar_close
+{
+    margin-right: 10px;
+}
+.mihanwp_notification_bar_box_wrapper .mihanwp_notification_bar_close::after
+{
+    content: '\00d7';
+    font-size: 20px;
+}
+.mihanwp_notification_bar_hide
+{
+    height: 0;
+    animation-name: mihanwp_notification_bar_hide;
+    animation-duration: .8s;
+}
+@keyframes mihanwp_notification_bar_hide
+{
+    100% {
+        height:0;
+    }
+}
+@media (max-width: 900px)
+{
+    .mihanwp_notification_bar_box_wrapper
+    {
+        height: auto !important;
+        padding: 7px 0;
+    }
+    .mihanwp_notification_bar_content
+    {
+        display: block !important;
+        height: auto;
+    }
+    .mihanwp_notification_bar_content > div,
+    .mihanwp_notification_bar_content .mihanwp_notification_bar_message p
+    {
+        text-align: center;
+    }
+    .mihanwp_notification_bar_box_wrapper .mihanwp_notification_bar_button
+    {
+        text-align: center !important;
+    }
+    .mihanwp_notification_bar_box_wrapper .mihanwp_notification_bar_button a
+    {
+        display: inline-block;
+    }
+}
