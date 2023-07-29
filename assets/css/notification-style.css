@@ -1,0 +1,180 @@
+.mwn-notification-bar-container,
+.mwn-notification-bar-body {
+    width: 100%;
+}
+
+.mwn-notification-bar-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: rgba(79,0,215,1);
+    color: #fff;
+}
+
+.mwn-notification-bar-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.mwn-notification-bar-text {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.mwn-notification-bar-box .close-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff3b;
+    color: #fff;
+    padding: 2px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.notification-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification-countdown {
+    font-size: 15px;
+}
+
+.notification-buttons a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    padding: 12px 15px;
+    border-radius: 7px;
+}
+
+.mwn-notification-bar-box .tick {
+    font-size:1rem;
+    white-space:nowrap;
+}
+
+.mwn-notification-bar-box .tick-flip,
+.mwn-notification-bar-box .tick-text-inline {
+    font-size:1.8em;
+}
+
+.mwn-notification-bar-box .tick-label {
+    margin-top: 0;
+    font-size: 1em;
+}
+
+.mwn-notification-bar-box .tick-char {
+    width:1.5em;
+}
+
+.mwn-notification-bar-box .tick-text-inline {
+    display:inline-block;
+    text-align:center;
+    min-width:1em;
+}
+
+.mwn-notification-bar-box .tick-text-inline + .tick-text-inline {
+    margin-left:-.325em;
+}
+
+.mwn-notification-bar-box .tick-group {
+    margin: 0 .5em;
+    text-align: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.mwn-notification-bar-box .tick-group > div {
+    direction: ltr;
+}
+
+.mwn-notification-bar-box .tick-text-inline {
+    color: rgb(90, 93, 99);
+}
+
+.mwn-notification-bar-box .tick-flip-panel {
+    color: rgb(255, 255, 255);
+}
+
+.mwn-notification-bar-box .tick-flip-panel-text-wrapper {
+    line-height: 1;
+}
+
+.mwn-notification-bar-box .tick-flip-panel {
+    background-color: rgb(59, 61, 59);
+}
+
+.mwn-notification-bar-box .tick-flip {
+    border-radius:0.12em;
+}
+
+@media screen and (max-width: 1200px) {
+    .mwn-notification-bar-content > div {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mwn-notification-bar-box .mwn-notification-bar-content {
+        height: auto;
+        gap: 7px;
+        padding-right: 27px;
+    }
+
+    .mwn-notification-bar-box .close-bar {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35px;
+        height: 35px;
+        border-radius: 0 0 0 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .mwn-notification-bar-box .notification-text {
+        font-size: 16px;
+    }
+
+    .mwn-notification-bar-box .notification-buttons {
+        flex-wrap: wrap;
+        gap: 7px;
+    }
+
+    .mwn-notification-bar-box .notification-buttons > div {
+        width: 100%;
+    }
+
+    .mwn-notification-bar-box .tick [data-layout~=horizontal][data-layout~=fit] {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+    }
+
+    .mwn-notification-bar-box .tick .tick-group {
+        display: inline-block;
+        justify-content: center;
+    }
+
+    .mwn-notification-bar-box .tick span.tick-label {
+        display: block;
+        margin-top: 10px;
+    }
+}

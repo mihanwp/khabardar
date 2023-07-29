@@ -1,314 +1,389 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanWP Notification Bar\n"
-"POT-Creation-Date: 2020-01-19 18:26+0330\n"
-"PO-Revision-Date: 2020-12-06 14:57+0330\n"
+"POT-Creation-Date: 2023-07-29 00:42+0330\n"
+"PO-Revision-Date: 2023-07-29 00:43+0330\n"
 "Last-Translator: \n"
-"Language-Team: info@mihanwp.com\n"
+"Language-Team: MihanWP\n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.2\n"
-"X-Poedit-Basepath: ../..\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: khabardar.php\n"
+"X-Poedit-WPHeader: mihanwp-notification-bar.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
-"X-Poedit-SearchPath-1: mihanwp-notification-bar\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: app/mihanwp_notification_bar_admin_menu.php:7
-msgid "mihanwp_notification_bar"
-msgstr ""
+#: app/AdminMenu.php:6
+msgid "Notification Bar"
+msgstr "نوار اطلاع رسانی"
 
-#: app/mihanwp_notification_bar_options.php:8
-msgid "General"
-msgstr "عمومی"
+#: app/Ajax.php:11 app/Assets.php:79 views/admin/option_panel.php:22
+msgid "Active"
+msgstr "فعال"
 
-#: app/mihanwp_notification_bar_options.php:9
-msgid "Style"
-msgstr "استایل"
+#: app/Ajax.php:11 app/Assets.php:80 views/admin/option_panel.php:22
+msgid "Inactive"
+msgstr "غیرفعال"
 
-#: app/mihanwp_notification_bar_options.php:15
-msgid "Solid"
+#: app/Assets.php:81
+msgid "Year"
+msgstr "سال"
+
+#: app/Assets.php:82
+msgid "Month"
+msgstr "ماه"
+
+#: app/Assets.php:83
+msgid "Week"
+msgstr "هفته"
+
+#: app/Assets.php:84
+msgid "Day"
+msgstr "روز"
+
+#: app/Assets.php:85 views/admin/option_panel.php:110
+msgid "Hour"
+msgstr "ساعت"
+
+#: app/Assets.php:86
+msgid "Minute"
+msgstr "دقیقه"
+
+#: app/Assets.php:87 views/admin/option_panel.php:112
+msgid "Seconds"
+msgstr "ثانیه"
+
+#: app/Assets.php:88
+msgid "Milli Seconds"
+msgstr "میلی ثانیه"
+
+#: app/NotificationOptions.php:52 views/admin/option_panel.php:108
+#, php-format
+msgid "%s Day %s Hour %s Minutes %s Seconds!"
+msgstr "%s روز %s ساعت %s دقیقه %s ثانیه!"
+
+#: app/NotificationOptions.php:56
+msgid "The training course registration time has ended."
+msgstr "زمان ثبت نام دوره آموزشی به پایان رسیده."
+
+#: app/NotificationOptions.php:72
+msgid "Mihan WordPress notification bar message text"
+msgstr "متن نوار اطلاع رسانی میهن وردپرس"
+
+#: app/NotificationOptions.php:80
+msgid "Buy training course"
+msgstr "خرید دوره آموزشی"
+
+#: app/OptionsControl.php:187
+msgid "Simple"
 msgstr "ساده"
 
-#: app/mihanwp_notification_bar_options.php:16
+#: app/OptionsControl.php:188
 msgid "Gradient"
-msgstr "گرادینت"
+msgstr "طیف رنگی"
 
-#: app/mihanwp_notification_bar_options.php:17
+#: app/OptionsControl.php:189 app/OptionsControl.php:223
 msgid "Image"
 msgstr "تصویر"
 
-#: mihanwp_notification_bar_updater.php:22
-msgid "<p>Khabardar plugin is not active! For using all features enter license key from <strong>Plugins > Khabardar License.</strong> Thanks!</p>"
-msgstr "‏‫<p>پلاگین خبردار فعال نیست! برای استفاده از همه ی امکانات کد لایسنس را در بخش <strong>افزونه‌ها > لایسنس خبردار</strong>  وارد کنید. سپاس!</p>"
-
-#: mihanwp_notification_bar_updater.php:33
-msgid "Khabardar License"
-msgstr "لایسنس خبردار"
-
-#: mihanwp_notification_bar_updater.php:50
-msgid "Plugin License"
-msgstr "لایسنس پلاگین"
-
-#: mihanwp_notification_bar_updater.php:64
-msgid "License Key"
-msgstr "کد لایسنس"
-
-#: mihanwp_notification_bar_updater.php:72
-msgid "Get your License from MihanWp in License section"
-msgstr "لایسنس را از پنل کاربری خود در سایت میهن وردپرس دریافت کنید"
-
-#: mihanwp_notification_bar_updater.php:84
-msgid "Activate License"
-msgstr "فعالسازی لایسنس"
-
-#: mihanwp_notification_bar_updater.php:92
-msgid "Successfully activated"
-msgstr "با موفقیت فعال شد"
-
-#: mihanwp_notification_bar_updater.php:170 mihanwp_notification_bar_updater.php:226
-msgid "An error occurred, try again"
-msgstr "یک خطا رخ داده است؛ بعدا امتحان کنید"
-
-#: mihanwp_notification_bar_updater.php:184
-#, php-format
-msgid "License expiration date: %s"
-msgstr "تاریخ انقضای لایسنس: %s"
-
-#: mihanwp_notification_bar_updater.php:194
-msgid "License deactivated"
-msgstr "لایسنس غیرفعال شد"
-
-#: mihanwp_notification_bar_updater.php:200
-msgid "License key is invalid"
-msgstr "کد لایسنس اشتباه است"
-
-#: mihanwp_notification_bar_updater.php:208
-msgid "Your license is not activated for this domain"
-msgstr "لایسنس برای این دامنه فعال نیست"
-
-#: mihanwp_notification_bar_updater.php:214
-msgid "License is not for this product: Khabardar"
-msgstr "لایسنس برای این محصول نیست: خبردار"
-
-#: mihanwp_notification_bar_updater.php:220
-msgid "Your license is already used; please purchase another license"
-msgstr "این کد لایسنس در حال استفاده است؛ لطفا یک لایسنس دیگر تهیه کنید"
-
-#: mihanwp_notification_bar_updater.php:712
-#, php-format
-msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s."
-msgstr "یک نسخه‌ی جدید از %1$s دردسترس است. %2$sجزئیات این نسخه %3$s را ببینید%4$s."
-
-#: mihanwp_notification_bar_updater.php:728
-#, php-format
-msgid "There is a new version of %1$s available. %2$sView version %3$s details%4$s or %5$supdate now%6$s."
-msgstr "نسخه‌ی جدیدی از %1$s دردسترس است. %2$sجزئیات نسخه را %3$s ببینید%4$s یا %5$sبه‌روز‌رسانی کنید%6$s."
-
-#: mihanwp_notification_bar_updater.php:1194
-msgid "You do not have permission to install plugin updates"
-msgstr "شما دسترسی لازم برای نصب آپدیت را ندارید"
-
-#: mihanwp_notification_bar_updater.php:1194
-msgid "Error"
-msgstr "ارور"
-
-#: views/admin/option_panel.php:2
-msgid "Khabardar Panel"
-msgstr "پنل تنظیمات خبردار"
-
-#: views/admin/settings-general.php:7
-msgid "Is banner active?"
-msgstr "آيا بنر فعال باشد؟"
-
-#: views/admin/settings-general.php:11
-msgid "Title"
-msgstr "عنوان"
-
-#: views/admin/settings-general.php:17
-msgid "Width"
-msgstr "پهنا"
-
-#: views/admin/settings-general.php:26
-msgid "Height"
-msgstr "ارتفاع"
-
-#: views/admin/settings-general.php:35
-msgid "Button title"
-msgstr "عنوان دکمه"
-
-#: views/admin/settings-general.php:39
-msgid "Link URL"
-msgstr "ادرس لینک"
-
-#: views/admin/settings-general.php:43
-msgid "Has close button?"
-msgstr "دکمه ی بسته شدن بنر نمایش داده شود؟"
-
-#: views/admin/settings-general.php:47
-msgid "Open in new tab?"
-msgstr "باز شدن لینک در یک صفحه جدید؟"
-
-#: views/admin/settings-general.php:52
-msgid "Has count down?"
-msgstr "شمارش معکوس نمایش داده شود؟"
-
-#: views/admin/settings-general.php:56
-msgid "End Date"
-msgstr "تاریخ پایان تایمر"
-
-#: views/admin/settings-general.php:61
-msgid "Expired text title"
-msgstr "متن منقضی شدن تایمر"
-
-#: views/admin/settings-general.php:65
-msgid "Count down content"
-msgstr "محتوای شمارش معکوس"
-
-#: views/admin/settings-general.php:69
-msgid "You can use this:"
-msgstr "شما می توانید از این استفاده کنید:"
-
-#: views/admin/settings-general.php:70
-msgid "{{d}} to show Day"
-msgstr "{{d}} برای نمایش روز"
-
-#: views/admin/settings-general.php:71
-msgid "{{h}} to show Hour"
-msgstr "{{h}} برای نمایش ساعت"
-
-#: views/admin/settings-general.php:72
-msgid "{{m}} to show Minutes"
-msgstr "{{m}} برای نمایش دقیقه"
-
-#: views/admin/settings-general.php:73
-msgid "{{s}} to show Seconds"
-msgstr "{{s}} برای نمایش ثانیه ها"
-
-#: views/admin/settings-style.php:5
-msgid "Background Mode"
-msgstr "حالت پس زمینه"
-
-#: views/admin/settings-style.php:18
-msgid "Backgrond Color"
+#: app/OptionsControl.php:194
+msgid "Background Color"
 msgstr "رنگ پس زمینه"
 
-#: views/admin/settings-style.php:22
-msgid "Backgrond Second Color"
+#: app/OptionsControl.php:204
+msgid "Background Secondary Color"
 msgstr "رنگ پس زمینه ثانویه"
 
-#: views/admin/settings-style.php:26
+#: app/OptionsControl.php:210
 msgid "Gradient Direction"
-msgstr "جهت گرادینت"
+msgstr "موقعیت طیف رنگی"
 
-#: views/admin/settings-style.php:30
-msgid "Backgroud Image"
-msgstr "تصویر پس زمینه"
+#: app/OptionsControl.php:226
+msgid "Select"
+msgstr "انتخاب"
 
-#: views/admin/settings-style.php:30
-msgid "Media"
-msgstr "فایل"
-
-#: views/admin/settings-style.php:35
+#: app/OptionsControl.php:230
 msgid "Background Repeat"
-msgstr "تکرار تصویر زمینه"
+msgstr "تکرار پس زمینه"
 
-#: views/admin/settings-style.php:41
+#: app/OptionsControl.php:233
 msgid "No Repeat"
-msgstr "تکرار نشود"
+msgstr "بدون تکرار"
 
-#: views/admin/settings-style.php:45
+#: app/OptionsControl.php:234
 msgid "Repeat"
 msgstr "تکرار"
 
-#: views/admin/settings-style.php:49
-msgid "Repeat-X"
-msgstr "تکرار X"
+#: app/OptionsControl.php:235
+msgid "X Repeat"
+msgstr "تکرار عمودی"
 
-#: views/admin/settings-style.php:53
-msgid "Repeat-Y"
-msgstr "تکرار Y"
+#: app/OptionsControl.php:236
+msgid "Y Repeat"
+msgstr "تکرار افقی"
 
-#: views/admin/settings-style.php:58
+#: app/OptionsControl.php:240
 msgid "Background Size"
-msgstr "اندازه تصویر پس زمینه"
+msgstr "سایز پس زمینه"
 
-#: views/admin/settings-style.php:63
+#: app/OptionsControl.php:243
 msgid "Auto"
 msgstr "خودکار"
 
-#: views/admin/settings-style.php:67
+#: app/OptionsControl.php:244
 msgid "Contain"
-msgstr "محتوای تصویر"
+msgstr "اندازه محتوا"
 
-#: views/admin/settings-style.php:71
+#: app/OptionsControl.php:245
 msgid "Cover"
 msgstr "کاور"
 
-#: views/admin/settings-style.php:77
+#: app/OptionsControl.php:249
 msgid "Background Position"
 msgstr "موقعیت پس زمینه"
 
-#: views/admin/settings-style.php:114
-msgid "Text color"
-msgstr "رنگ متن"
+#: app/OptionsControl.php:252 views/admin/option_panel.php:108
+msgid "Default"
+msgstr "پیشفرض"
 
-#: views/admin/settings-style.php:119
-msgid "Link color"
-msgstr "رنگ لینک"
+#: app/OptionsControl.php:253
+msgid "Center Center"
+msgstr "وسط وسط"
 
-#: views/admin/settings-style.php:124
-msgid "Link button color"
-msgstr "رنگ دکمه"
+#: app/OptionsControl.php:254
+msgid "Center Left"
+msgstr "وسط چپ"
 
-#: views/admin/settings-style.php:128
-msgid "Close button color"
-msgstr "رنگ متن دکمه ی بستن بنر"
+#: app/OptionsControl.php:255
+msgid "Center Right"
+msgstr "وسط راست"
 
-#: views/admin/settings-style.php:132
-msgid "Close button background color"
-msgstr "رنگ دکمه ی بستن بنر"
+#: app/OptionsControl.php:256
+msgid "Top Center"
+msgstr "بالا وسط"
 
-#: views/admin/settings-style.php:136
-msgid "Title font size"
-msgstr "اندازه فونت عنوان"
+#: app/OptionsControl.php:257
+msgid "Top Left"
+msgstr "بالا چپ"
 
-#: views/admin/settings-style.php:140
-msgid "Timer font size"
-msgstr "اندازه فونت تایمر"
+#: app/OptionsControl.php:258
+msgid "Top Right"
+msgstr "بالا راست"
 
-#: views/admin/settings-style.php:144
-msgid "Button font size"
-msgstr "اندازه فونت دکمه"
+#: app/OptionsControl.php:259
+msgid "Bottom Center"
+msgstr "پایین وسط"
 
-#: views/user/box.php:30
-msgid "Khabardar plugin is not active! Please enter license key in <strong>Plugin > Khabardar License</strong>Thanks!"
-msgstr "پلاگین خبردار فعال نیست! لطفا کد لایسنس را از بخش <strong>پلاگین > لایسنس خبردار</strong> وارد کنید. سپاس!"
+#: app/OptionsControl.php:260
+msgid "Bottom Left"
+msgstr "پایین چپ"
+
+#: app/OptionsControl.php:261
+msgid "Bottom Right"
+msgstr "پایین راست"
 
 #. Plugin Name of the plugin/theme
-msgid "mihanwp_notification_bar"
-msgstr "mihanwp_notification_bar"
+#: views/admin/option_panel.php:7
+msgid "MihanWP Notification Bar"
+msgstr "نوار اطلاع رسانی میهن وردپرس"
+
+#: views/admin/option_panel.php:12
+msgid "Test Notification In Top"
+msgstr "تست  نوار اطلاع رسانی در بالا"
+
+#: views/admin/option_panel.php:15
+msgid "Content"
+msgstr "محتوا"
+
+#: views/admin/option_panel.php:16 views/admin/option_panel.php:79
+msgid "Style"
+msgstr "استایل"
+
+#: views/admin/option_panel.php:22
+msgid "Status"
+msgstr "وضعیت"
+
+#: views/admin/option_panel.php:27
+msgid "Text"
+msgstr "متن"
+
+#: views/admin/option_panel.php:33
+msgid "Show Button"
+msgstr "نمایش دکمه"
+
+#: views/admin/option_panel.php:43
+msgid "Button Title"
+msgstr "عنوان دکمه"
+
+#: views/admin/option_panel.php:47
+msgid "Button Link"
+msgstr "لینک دکمه"
+
+#: views/admin/option_panel.php:52
+msgid "Open link to new tab"
+msgstr "بازشدن لینک در صفحه جدید"
+
+#: views/admin/option_panel.php:62
+msgid "Countdown Timer"
+msgstr "تایمر شمارش معکوس"
+
+#: views/admin/option_panel.php:83
+msgid "Style 1"
+msgstr "استایل 1"
+
+#: views/admin/option_panel.php:84
+msgid "Style 2"
+msgstr "استایل 2"
+
+#: views/admin/option_panel.php:95
+msgid "Countdown Datetime"
+msgstr "تاریخ و زمان تایمر"
+
+#: views/admin/option_panel.php:99
+msgid "Countdown End Text"
+msgstr "متن پایان تایمر"
+
+#: views/admin/option_panel.php:105
+msgid "Countdown Timer Text"
+msgstr "متن تایمر"
+
+#: views/admin/option_panel.php:109
+msgid "Days"
+msgstr "روز"
+
+#: views/admin/option_panel.php:111
+msgid "Minutes"
+msgstr "دقیقه"
+
+#: views/admin/option_panel.php:121
+msgid "Only Logged In User"
+msgstr "فقط کاربر وارد شده"
+
+#: views/admin/option_panel.php:131
+msgid "Woo Customer Products"
+msgstr "مشتری محصولات ووکامرس"
+
+#: views/admin/option_panel.php:135
+msgid "Only shown to buyers of selected woocommerce products."
+msgstr "فقط به خریداران محصولات انتخاب شده ووکامرس نمایش داده می شود."
+
+#: views/admin/option_panel.php:145
+msgid "Products"
+msgstr "محصولات"
+
+#: views/admin/option_panel.php:156
+msgid "Woocommerce is not active."
+msgstr "ووکامرس فعال نیست."
+
+#: views/admin/option_panel.php:165
+msgid "Show in Special Pages"
+msgstr "نمایش در صفحات خاص"
+
+#: views/admin/option_panel.php:179 views/admin/option_panel.php:236
+msgid "Select Page"
+msgstr "انتخاب صفحه"
+
+#: views/admin/option_panel.php:183 views/admin/option_panel.php:240
+msgid "Page Url"
+msgstr "آدرس صفحه"
+
+#: views/admin/option_panel.php:211 views/admin/option_panel.php:268
+msgid "Separate the addresses of the pages with an enter (each address on one line)."
+msgstr "آدرس صفحات را با اینتر از هم جدا کنید (هر آدرس در یک خط)."
+
+#: views/admin/option_panel.php:222
+msgid "Hide in Special Pages"
+msgstr "عدم نمایش در صفحات خاص"
+
+#: views/admin/option_panel.php:282
+msgid "Box Width"
+msgstr "عرض جعبه"
+
+#: views/admin/option_panel.php:297
+msgid "Box Height"
+msgstr "ارتفاع جعبه"
+
+#: views/admin/option_panel.php:313
+msgid "Text Color"
+msgstr "رنگ متن"
+
+#: views/admin/option_panel.php:321
+msgid "Background"
+msgstr "پس زمینه"
+
+#: views/admin/option_panel.php:342
+msgid "Button Text Color"
+msgstr "رنگ متن دکمه"
+
+#: views/admin/option_panel.php:350
+msgid "Button Background Color"
+msgstr "رنگ پس زمینه دکمه"
+
+#: views/admin/option_panel.php:358
+msgid "Button Border Radius"
+msgstr "گردی حاشیه دکمه"
+
+#: views/admin/option_panel.php:369
+msgid "Button Padding"
+msgstr "فاصله داخلی دکمه"
+
+#: views/admin/option_panel.php:391
+msgid "Close Color"
+msgstr "رنگ دکمه بستن"
+
+#: views/admin/option_panel.php:399
+msgid "Close Background Color"
+msgstr "رنگ پس زمینه دکمه بستن"
+
+#: views/admin/option_panel.php:411
+msgid "Timer Text Color"
+msgstr "رنگ متن تایمر"
+
+#: views/admin/option_panel.php:419
+msgid "Timer Number Color"
+msgstr "رنگ اعداد تایمر"
+
+#: views/admin/option_panel.php:427
+msgid "Timer Number Background Color"
+msgstr "رنگ پس زمینه اعداد تایمر"
+
+#: views/admin/option_panel.php:435
+msgid "Timer Text Font Size"
+msgstr "سایز فونت متن تایمر"
+
+#: views/admin/option_panel.php:451
+msgid "Text Font Size"
+msgstr "سایز فونت متن"
+
+#: views/admin/option_panel.php:463
+msgid "Button Font Size"
+msgstr "سایز فونت دکمه"
+
+#: views/admin/option_panel.php:481
+msgid "Save Changes"
+msgstr "ذخیره تغییرات"
 
 #. Plugin URI of the plugin/theme
-msgid "https://mihanwp.com/khabardar/"
-msgstr "https://mihanwp.com/khabardar/"
+msgid "https://mihanwp.com/mihanwp-notification-bar/"
+msgstr ""
 
 #. Description of the plugin/theme
 msgid "Create notification bar in your website header."
-msgstr "ایجاد نوار اطلاع رسانی در هدر وب سایت شما."
+msgstr "ایجاد سریع و ساده نوار اطلاع رسانی و نمایش در هدر وبسایت"
 
 #. Author of the plugin/theme
 msgid "MihanWP"
-msgstr "میهن وردپرس"
+msgstr ""
 
 #. Author URI of the plugin/theme
 msgid "https://mihanwp.com"
-msgstr "https://mihanwp.com"
+msgstr ""
 
-#~ msgid "Color"
-#~ msgstr "رنگ"
+#~ msgid "inactive"
+#~ msgstr "غیرفعال"
