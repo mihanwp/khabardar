@@ -43,6 +43,11 @@
     cursor: pointer;
 }
 
+.mwn-notification-bar-box .close-bar svg {
+    fill: #fff;
+    width: 20px;
+}
+
 .notification-buttons {
     display: flex;
     align-items: center;
@@ -134,7 +139,6 @@
     .mwn-notification-bar-box .mwn-notification-bar-content {
         height: auto;
         gap: 7px;
-        padding-right: 27px;
     }
 
     .mwn-notification-bar-box .close-bar {
@@ -148,6 +152,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .mwn-notification-bar-box {
+        padding: 10px;
+    }
+
     .mwn-notification-bar-box .notification-text {
         font-size: 16px;
     }
@@ -171,6 +179,8 @@
     .mwn-notification-bar-box .tick .tick-group {
         display: inline-block;
         justify-content: center;
+        margin: 0;
+        transform: scale(.9);
     }
 
     .mwn-notification-bar-box .tick span.tick-label {

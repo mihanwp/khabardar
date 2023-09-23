@@ -12,7 +12,9 @@ $show_btn = !is_admin() ? $btn_status === true : true;
     <div class="mwn-notification-bar-box">
         <div class="mwn-notification-bar-content mwn-<?php echo is_rtl() ? 'rtl' : 'ltr' ?>">
             <div class="mwn-notification-bar-text">
-                <div class="close-bar"><i class="dashicons dashicons-no-alt"></i></div>
+                <div class="close-bar">
+                    <svg fill="#000000" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+                </div>
                 <div class="notification-text"><?php echo \mwn\app\NotificationOptions::get_notification_content() ?></div>
             </div>
             <div class="notification-buttons">

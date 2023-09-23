@@ -2,7 +2,7 @@
 /**
  * plugin name: MihanWP Notification Bar
  * description: Create notification bar in your website header.
- * version: 3.1
+ * version: 3.1.1
  * author: MihanWP
  * Text Domain: mihanwp-notification-bar
  * Domain Path: /languages
@@ -16,7 +16,7 @@ define('MWN_URL', plugin_dir_url(__FILE__));
 define('MWN_BASENAME', basename(dirname(__FILE__)));
 define('MWN_BASE_FILE', __FILE__);
 define('MWN_LANG_PATH', basename(__DIR__) . DIRECTORY_SEPARATOR . 'languages');
-define('MWN_VERSION', 3.1);
+define('MWN_VERSION', '3.1.1');
 define('MWN_TEXT_DOMAIN', 'mihanwp-notification-bar');
 define('MWN_VIEW_USER_PATH', MWN_PATH . 'views/user/');
 define('MWN_CSS_URL', MWN_URL . 'assets/css/');

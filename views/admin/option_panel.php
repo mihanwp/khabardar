@@ -392,7 +392,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                     'name' => 'notification_close_color',
                                     'value' => NotificationOptions::getOption('notification_close_color', '#ffffff'),
                                     'selectors' => [
-                                        '.mwn-notification-bar-box .close-bar' => 'color: {{VALUE}}'
+                                        '.mwn-notification-bar-box .mwn-notification-bar-text .close-bar svg' => 'fill: {{VALUE}}'
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
