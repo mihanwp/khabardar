@@ -25,7 +25,7 @@ $notification_status = NotificationOptions::get_notification_status();
                         <div class="mwn-options-list">
                             <div class="mwn-field-wrap">
                                 <label for="notification_content"><?php _e('Text', MWNB_TEXT_DOMAIN) ?></label>
-                                <textarea name="notification_content" id="notification_content" data-preview-to=".notification-text"><?php echo NotificationOptions::get_notification_content(); ?></textarea>
+                                <textarea name="notification_content" id="notification_content" data-preview-to=".notification-text"><?php echo esc_attr(NotificationOptions::get_notification_content()); ?></textarea>
                             </div>
                             <div class="mwn-field-section">
                                 <?php
@@ -41,11 +41,11 @@ $notification_status = NotificationOptions::get_notification_status();
                                 <div class="button-options" style="display:<?php echo NotificationOptions::get_button_status() ? 'block' : 'none' ?>">
                                     <div class="mwn-field-wrap">
                                         <label for="notification_button_text"><?php _e('Button Title', MWNB_TEXT_DOMAIN) ?></label>
-                                        <input type="text" name="notification_button_text" id="notification_button_text" data-preview-to=".notification-btn" value="<?php echo NotificationOptions::get_button_text() ?>">
+                                        <input type="text" name="notification_button_text" id="notification_button_text" data-preview-to=".notification-btn" value="<?php echo esc_attr(NotificationOptions::get_button_text()) ?>">
                                     </div>
                                     <div class="mwn-field-wrap">
                                         <label for="notification_button_link"><?php _e('Button Link', MWNB_TEXT_DOMAIN) ?></label>
-                                        <input type="text" name="notification_button_link" dir="ltr" id="notification_button_link" data-preview-to=".notification-btn/href" value="<?php echo NotificationOptions::get_button_link() ?>">
+                                        <input type="text" name="notification_button_link" dir="ltr" id="notification_button_link" data-preview-to=".notification-btn/href" value="<?php echo esc_attr(NotificationOptions::get_button_link()) ?>">
                                     </div>
                                     <?php
                                     OptionsControl::renderControl(OptionsControl::CHECKBOX, [
@@ -93,21 +93,21 @@ $notification_status = NotificationOptions::get_notification_status();
                                     <div class="countdown-style-type countdown-style-type-1 countdown-style-type-2">
                                         <div class="mwn-field-wrap">
                                             <label for="notification_countdown_datetime"><?php _e('Countdown Datetime', MWNB_TEXT_DOMAIN) ?></label>
-                                            <input type="datetime-local" name="notification_countdown_datetime" id="notification_countdown_datetime" class="countdown-input" value="<?php echo NotificationOptions::get_countdown_datetime() ?>">
+                                            <input type="datetime-local" name="notification_countdown_datetime" id="notification_countdown_datetime" class="countdown-input" value="<?php echo esc_attr(NotificationOptions::get_countdown_datetime()) ?>">
                                         </div>
                                         <div class="mwn-field-wrap">
                                             <label for="notification_countdown_end_text"><?php _e('Countdown End Text', MWNB_TEXT_DOMAIN) ?></label>
-                                            <input type="text" name="notification_countdown_end_text" id="notification_countdown_end_text" data-preview-to=".end-time-content" value="<?php echo NotificationOptions::get_countdown_end_text() ?>">
+                                            <input type="text" name="notification_countdown_end_text" id="notification_countdown_end_text" data-preview-to=".end-time-content" value="<?php echo esc_attr(NotificationOptions::get_countdown_end_text()) ?>">
                                         </div>
                                     </div>
                                     <div class="countdown-style-type countdown-style-type-1" style="display:<?php echo $countdown_type === 1 ? 'block' : 'none' ?>;">
                                         <div class="mwn-field-wrap">
                                             <label><?php _e('Labels', MWNB_TEXT_DOMAIN) ?></label>
                                             <div class="mwn-fields-group-4">
-                                                <input type="text" name="countdown_days_label" id="countdown_days_label" data-preview-to=".tick-countdown > div > div:nth-child(1) .tick-label" placeholder="<?php echo __('Days', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_days_label() ?>">
-                                                <input type="text" name="countdown_hours_label" id="countdown_hours_label" data-preview-to=".tick-countdown > div > div:nth-child(2) .tick-label" placeholder="<?php echo __('Hours', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_hours_label() ?>">
-                                                <input type="text" name="countdown_minutes_label" id="countdown_minutes_label" data-preview-to=".tick-countdown > div > div:nth-child(3) .tick-label" placeholder="<?php echo __('Minutes', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_minutes_label() ?>">
-                                                <input type="text" name="countdown_seconds_label" id="countdown_seconds_label" data-preview-to=".tick-countdown > div > div:nth-child(4) .tick-label" placeholder="<?php echo __('Seconds', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_seconds_label() ?>">
+                                                <input type="text" name="countdown_days_label" id="countdown_days_label" data-preview-to=".tick-countdown > div > div:nth-child(1) .tick-label" placeholder="<?php echo __('Days', MWNB_TEXT_DOMAIN) ?>" value="<?php echo esc_attr(NotificationOptions::get_countdown_days_label()) ?>">
+                                                <input type="text" name="countdown_hours_label" id="countdown_hours_label" data-preview-to=".tick-countdown > div > div:nth-child(2) .tick-label" placeholder="<?php echo __('Hours', MWNB_TEXT_DOMAIN) ?>" value="<?php echo esc_attr(NotificationOptions::get_countdown_hours_label()) ?>">
+                                                <input type="text" name="countdown_minutes_label" id="countdown_minutes_label" data-preview-to=".tick-countdown > div > div:nth-child(3) .tick-label" placeholder="<?php echo __('Minutes', MWNB_TEXT_DOMAIN) ?>" value="<?php echo esc_attr(NotificationOptions::get_countdown_minutes_label()) ?>">
+                                                <input type="text" name="countdown_seconds_label" id="countdown_seconds_label" data-preview-to=".tick-countdown > div > div:nth-child(4) .tick-label" placeholder="<?php echo __('Seconds', MWNB_TEXT_DOMAIN) ?>" value="<?php echo esc_attr(NotificationOptions::get_countdown_seconds_label()) ?>">
                                             </div>
                                         </div>
                                     </div>
