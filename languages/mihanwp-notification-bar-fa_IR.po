@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: MihanWP Notification Bar\n"
-"POT-Creation-Date: 2023-07-29 00:42+0330\n"
-"PO-Revision-Date: 2023-07-29 00:43+0330\n"
+"POT-Creation-Date: 2023-10-23 11:17+0330\n"
+"PO-Revision-Date: 2023-10-23 11:18+0330\n"
 "Last-Translator: \n"
 "Language-Team: MihanWP\n"
 "Language: fa_IR\n"
@@ -23,47 +23,31 @@ msgstr ""
 msgid "Notification Bar"
 msgstr "نوار اطلاع رسانی"
 
-#: app/Ajax.php:11 app/Assets.php:79 views/admin/option_panel.php:22
+#: app/Ajax.php:11 app/Assets.php:77 views/admin/option_panel.php:22
 msgid "Active"
 msgstr "فعال"
 
-#: app/Ajax.php:11 app/Assets.php:80 views/admin/option_panel.php:22
+#: app/Ajax.php:11 app/Assets.php:78 views/admin/option_panel.php:22
 msgid "Inactive"
 msgstr "غیرفعال"
 
-#: app/Assets.php:81
+#: app/Assets.php:79
 msgid "Year"
 msgstr "سال"
 
-#: app/Assets.php:82
+#: app/Assets.php:80
 msgid "Month"
 msgstr "ماه"
 
-#: app/Assets.php:83
+#: app/Assets.php:81
 msgid "Week"
 msgstr "هفته"
 
-#: app/Assets.php:84
-msgid "Day"
-msgstr "روز"
-
-#: app/Assets.php:85 views/admin/option_panel.php:110
-msgid "Hour"
-msgstr "ساعت"
-
 #: app/Assets.php:86
-msgid "Minute"
-msgstr "دقیقه"
-
-#: app/Assets.php:87 views/admin/option_panel.php:112
-msgid "Seconds"
-msgstr "ثانیه"
-
-#: app/Assets.php:88
 msgid "Milli Seconds"
 msgstr "میلی ثانیه"
 
-#: app/NotificationOptions.php:52 views/admin/option_panel.php:108
+#: app/NotificationOptions.php:52 views/admin/option_panel.php:119
 #, php-format
 msgid "%s Day %s Hour %s Minutes %s Seconds!"
 msgstr "%s روز %s ساعت %s دقیقه %s ثانیه!"
@@ -72,11 +56,30 @@ msgstr "%s روز %s ساعت %s دقیقه %s ثانیه!"
 msgid "The training course registration time has ended."
 msgstr "زمان ثبت نام دوره آموزشی به پایان رسیده."
 
-#: app/NotificationOptions.php:72
+#: app/NotificationOptions.php:60 views/admin/option_panel.php:107
+#: views/admin/option_panel.php:120
+msgid "Days"
+msgstr "روز"
+
+#: app/NotificationOptions.php:64 views/admin/option_panel.php:108
+msgid "Hours"
+msgstr "ساعت"
+
+#: app/NotificationOptions.php:68 views/admin/option_panel.php:109
+#: views/admin/option_panel.php:122
+msgid "Minutes"
+msgstr "دقیقه"
+
+#: app/NotificationOptions.php:72 views/admin/option_panel.php:110
+#: views/admin/option_panel.php:123
+msgid "Seconds"
+msgstr "ثانیه"
+
+#: app/NotificationOptions.php:88
 msgid "Mihan WordPress notification bar message text"
 msgstr "متن نوار اطلاع رسانی میهن وردپرس"
 
-#: app/NotificationOptions.php:80
+#: app/NotificationOptions.php:96
 msgid "Buy training course"
 msgstr "خرید دوره آموزشی"
 
@@ -148,7 +151,7 @@ msgstr "کاور"
 msgid "Background Position"
 msgstr "موقعیت پس زمینه"
 
-#: app/OptionsControl.php:252 views/admin/option_panel.php:108
+#: app/OptionsControl.php:252 views/admin/option_panel.php:119
 msgid "Default"
 msgstr "پیشفرض"
 
@@ -250,122 +253,122 @@ msgid "Countdown End Text"
 msgstr "متن پایان تایمر"
 
 #: views/admin/option_panel.php:105
+msgid "Labels"
+msgstr "برچسب ها"
+
+#: views/admin/option_panel.php:116
 msgid "Countdown Timer Text"
 msgstr "متن تایمر"
 
-#: views/admin/option_panel.php:109
-msgid "Days"
-msgstr "روز"
-
-#: views/admin/option_panel.php:111
-msgid "Minutes"
-msgstr "دقیقه"
-
 #: views/admin/option_panel.php:121
+msgid "Hour"
+msgstr "ساعت"
+
+#: views/admin/option_panel.php:132
 msgid "Only Logged In User"
 msgstr "فقط کاربر وارد شده"
 
-#: views/admin/option_panel.php:131
+#: views/admin/option_panel.php:142
 msgid "Woo Customer Products"
 msgstr "مشتری محصولات ووکامرس"
 
-#: views/admin/option_panel.php:135
+#: views/admin/option_panel.php:146
 msgid "Only shown to buyers of selected woocommerce products."
 msgstr "فقط به خریداران محصولات انتخاب شده ووکامرس نمایش داده می شود."
 
-#: views/admin/option_panel.php:145
+#: views/admin/option_panel.php:156
 msgid "Products"
 msgstr "محصولات"
 
-#: views/admin/option_panel.php:156
+#: views/admin/option_panel.php:167
 msgid "Woocommerce is not active."
 msgstr "ووکامرس فعال نیست."
 
-#: views/admin/option_panel.php:165
+#: views/admin/option_panel.php:176
 msgid "Show in Special Pages"
 msgstr "نمایش در صفحات خاص"
 
-#: views/admin/option_panel.php:179 views/admin/option_panel.php:236
+#: views/admin/option_panel.php:190 views/admin/option_panel.php:247
 msgid "Select Page"
 msgstr "انتخاب صفحه"
 
-#: views/admin/option_panel.php:183 views/admin/option_panel.php:240
+#: views/admin/option_panel.php:194 views/admin/option_panel.php:251
 msgid "Page Url"
 msgstr "آدرس صفحه"
 
-#: views/admin/option_panel.php:211 views/admin/option_panel.php:268
+#: views/admin/option_panel.php:222 views/admin/option_panel.php:279
 msgid "Separate the addresses of the pages with an enter (each address on one line)."
 msgstr "آدرس صفحات را با اینتر از هم جدا کنید (هر آدرس در یک خط)."
 
-#: views/admin/option_panel.php:222
+#: views/admin/option_panel.php:233
 msgid "Hide in Special Pages"
 msgstr "عدم نمایش در صفحات خاص"
 
-#: views/admin/option_panel.php:282
+#: views/admin/option_panel.php:293
 msgid "Box Width"
 msgstr "عرض جعبه"
 
-#: views/admin/option_panel.php:297
+#: views/admin/option_panel.php:308
 msgid "Box Height"
 msgstr "ارتفاع جعبه"
 
-#: views/admin/option_panel.php:313
+#: views/admin/option_panel.php:324
 msgid "Text Color"
 msgstr "رنگ متن"
 
-#: views/admin/option_panel.php:321
+#: views/admin/option_panel.php:332
 msgid "Background"
 msgstr "پس زمینه"
 
-#: views/admin/option_panel.php:342
+#: views/admin/option_panel.php:353
 msgid "Button Text Color"
 msgstr "رنگ متن دکمه"
 
-#: views/admin/option_panel.php:350
+#: views/admin/option_panel.php:361
 msgid "Button Background Color"
 msgstr "رنگ پس زمینه دکمه"
 
-#: views/admin/option_panel.php:358
+#: views/admin/option_panel.php:369
 msgid "Button Border Radius"
 msgstr "گردی حاشیه دکمه"
 
-#: views/admin/option_panel.php:369
+#: views/admin/option_panel.php:380
 msgid "Button Padding"
 msgstr "فاصله داخلی دکمه"
 
-#: views/admin/option_panel.php:391
+#: views/admin/option_panel.php:402
 msgid "Close Color"
 msgstr "رنگ دکمه بستن"
 
-#: views/admin/option_panel.php:399
+#: views/admin/option_panel.php:410
 msgid "Close Background Color"
 msgstr "رنگ پس زمینه دکمه بستن"
 
-#: views/admin/option_panel.php:411
+#: views/admin/option_panel.php:422
 msgid "Timer Text Color"
 msgstr "رنگ متن تایمر"
 
-#: views/admin/option_panel.php:419
+#: views/admin/option_panel.php:430
 msgid "Timer Number Color"
 msgstr "رنگ اعداد تایمر"
 
-#: views/admin/option_panel.php:427
+#: views/admin/option_panel.php:438
 msgid "Timer Number Background Color"
 msgstr "رنگ پس زمینه اعداد تایمر"
 
-#: views/admin/option_panel.php:435
-msgid "Timer Text Font Size"
-msgstr "سایز فونت متن تایمر"
+#: views/admin/option_panel.php:446
+msgid "Timer End Text Font Size"
+msgstr "سایز فونت متن پایان تایمر"
 
-#: views/admin/option_panel.php:451
+#: views/admin/option_panel.php:462
 msgid "Text Font Size"
 msgstr "سایز فونت متن"
 
-#: views/admin/option_panel.php:463
+#: views/admin/option_panel.php:474
 msgid "Button Font Size"
 msgstr "سایز فونت دکمه"
 
-#: views/admin/option_panel.php:481
+#: views/admin/option_panel.php:492
 msgid "Save Changes"
 msgstr "ذخیره تغییرات"
 
@@ -375,7 +378,7 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid "Create notification bar in your website header."
-msgstr "ایجاد سریع و ساده نوار اطلاع رسانی و نمایش در هدر وبسایت"
+msgstr "ایجاد سریع و ساده نوار اطلاع رسانی و نمایش در هدر وبسایت."
 
 #. Author of the plugin/theme
 msgid "MihanWP"
@@ -384,6 +387,12 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://mihanwp.com"
 msgstr ""
+
+#~ msgid "Day"
+#~ msgstr "روز"
+
+#~ msgid "Minute"
+#~ msgstr "دقیقه"
 
 #~ msgid "inactive"
 #~ msgstr "غیرفعال"

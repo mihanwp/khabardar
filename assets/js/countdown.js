@@ -75,17 +75,14 @@ class CountdownGenerator {
         textEl.empty();
 
         if(!textEl1.is(':visible')){
-            console.log(111)
             textEl.show();
         }
 
         if(typeof this.inter !== 'undefined' || !textEl.is(':visible')){
-            console.log(222)
             clearInterval(this.inter);
         }
 
         this.inter = setInterval(function (){
-            console.log(333)
             let now = new Date();
             let timeDifference = date - now;
 

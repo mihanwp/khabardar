@@ -8,7 +8,7 @@ class Ajax {
         $new_status = !$current_status || $current_status === 'inactive' ? 'active' : 'inactive';
         $change = NotificationOptions::update_notification_status($new_status);
         if($change){
-            wp_send_json_success(['status' => $new_status, 'status_label' => $new_status === 'active' ? __('Active', MWN_TEXT_DOMAIN) : __('Inactive', MWN_TEXT_DOMAIN)]);
+            wp_send_json_success(['status' => $new_status, 'status_label' => $new_status === 'active' ? __('Active', MWNB_TEXT_DOMAIN) : __('Inactive', MWNB_TEXT_DOMAIN)]);
         } else {
             wp_send_json_error();
         }

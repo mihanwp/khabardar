@@ -26,6 +26,6 @@ class Callbacks {
 
         if(!NotificationConditions::display_include_pages() || !NotificationConditions::hide_exclude_pages()) return false;
 
-        include_once MWN_VIEW_USER_PATH . 'notification-content.php';
+        include_once MWNB_VIEW_USER_PATH . 'notification-content.php';
     }
 }

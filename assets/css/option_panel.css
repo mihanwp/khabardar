@@ -557,6 +557,18 @@ label.mwn-checkbox-label:active {
     margin-top: 7px;
 }
 
+.mwn-fields-group-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+}
+
+@media screen and (min-width: 1200px) {
+    .mwn-notification-bar-options {
+        width: 390px;
+    }
+}
+
 @media screen and (max-width: 1400px) {
     .mwn-notification-bar-wrap {
         flex-wrap: wrap;

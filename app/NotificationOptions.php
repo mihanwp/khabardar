@@ -49,11 +49,27 @@ class NotificationOptions {
     }
 
     public static function get_countdown_content(){
-        return self::getOption('notification_countdown_content', sprintf(__('%s Day %s Hour %s Minutes %s Seconds!', MWN_TEXT_DOMAIN), '{{d}}', '{{h}}', '{{m}}', '{{s}}'));
+        return self::getOption('notification_countdown_content', sprintf(__('%s Day %s Hour %s Minutes %s Seconds!', MWNB_TEXT_DOMAIN), '{{d}}', '{{h}}', '{{m}}', '{{s}}'));
     }
 
     public static function get_countdown_end_text(){
-        return self::getOption('notification_countdown_end_text', __('The training course registration time has ended.', MWN_TEXT_DOMAIN));
+        return self::getOption('notification_countdown_end_text', __('The training course registration time has ended.', MWNB_TEXT_DOMAIN));
+    }
+
+    public static function get_countdown_days_label(){
+        return self::getOption('countdown_days_label', __('Days', MWNB_TEXT_DOMAIN));
+    }
+
+    public static function get_countdown_hours_label(){
+        return self::getOption('countdown_hours_label', __('Hours', MWNB_TEXT_DOMAIN));
+    }
+
+    public static function get_countdown_minutes_label(){
+        return self::getOption('countdown_minutes_label', __('Minutes', MWNB_TEXT_DOMAIN));
+    }
+
+    public static function get_countdown_seconds_label(){
+        return self::getOption('countdown_seconds_label', __('Seconds', MWNB_TEXT_DOMAIN));
     }
 
     public static function get_countdown_status(){
@@ -69,7 +85,7 @@ class NotificationOptions {
     }
 
     public static function get_notification_content(){
-        return self::getOption('notification_content', __('Mihan WordPress notification bar message text', MWN_TEXT_DOMAIN));
+        return self::getOption('notification_content', __('Mihan WordPress notification bar message text', MWNB_TEXT_DOMAIN));
     }
 
     public static function get_button_status(){
@@ -77,7 +93,7 @@ class NotificationOptions {
     }
 
     public static function get_button_text(){
-        return self::getOption('notification_button_text', __('Buy training course', MWN_TEXT_DOMAIN));
+        return self::getOption('notification_button_text', __('Buy training course', MWNB_TEXT_DOMAIN));
     }
 
     public static function get_button_link(){

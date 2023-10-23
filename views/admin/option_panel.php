@@ -9,28 +9,28 @@ $notification_status = NotificationOptions::get_notification_status();
         <div class="mwn-notification-bar-wrap">
             <div class="mwn-notification-bar-options">
                 <div class="mwn-responsive-options">
-                    <a href="#" class="mwn-to-top"><i class="dashicons dashicons-arrow-up-alt"></i><?php _e('Test Notification In Top', MWN_TEXT_DOMAIN) ?></a>
+                    <a href="#" class="mwn-to-top"><i class="dashicons dashicons-arrow-up-alt"></i><?php _e('Test Notification In Top', MWNB_TEXT_DOMAIN) ?></a>
                 </div>
                 <div class="mwn-tabs">
-                    <a href="#" class="mwn-toggle-tab is-active" data-target="#mwn-content-tab"><?php _e('Content', MWN_TEXT_DOMAIN) ?></a>
-                    <a href="#" class="mwn-toggle-tab" data-target="#mwn-style-tab"><?php _e('Style', MWN_TEXT_DOMAIN) ?></a>
+                    <a href="#" class="mwn-toggle-tab is-active" data-target="#mwn-content-tab"><?php _e('Content', MWNB_TEXT_DOMAIN) ?></a>
+                    <a href="#" class="mwn-toggle-tab" data-target="#mwn-style-tab"><?php _e('Style', MWNB_TEXT_DOMAIN) ?></a>
                 </div>
                 <div class="mwn-tabs-content">
                     <!--------------------------- Content Tab ------------------------------->
                     <div class="mwn-tab-content is-active" id="mwn-content-tab">
                         <div class="mwn-notification-status <?php echo $notification_status !== 'active' ? 'inactive' : esc_attr($notification_status) ?>">
-                            <div class="mwn-status"><?php echo sprintf('%s<span>%s</span>', __('Status', MWN_TEXT_DOMAIN), ($notification_status === 'active' ? __('Active', MWN_TEXT_DOMAIN) : __('Inactive', MWN_TEXT_DOMAIN))) ?></div>
+                            <div class="mwn-status"><?php echo sprintf('%s<span>%s</span>', __('Status', MWNB_TEXT_DOMAIN), ($notification_status === 'active' ? __('Active', MWNB_TEXT_DOMAIN) : __('Inactive', MWNB_TEXT_DOMAIN))) ?></div>
                             <span class="mwn-change-status"><i class="dashicons dashicons-update"></i></span>
                         </div>
                         <div class="mwn-options-list">
                             <div class="mwn-field-wrap">
-                                <label for="notification_content"><?php _e('Text', MWN_TEXT_DOMAIN) ?></label>
+                                <label for="notification_content"><?php _e('Text', MWNB_TEXT_DOMAIN) ?></label>
                                 <textarea name="notification_content" id="notification_content" data-preview-to=".notification-text"><?php echo NotificationOptions::get_notification_content(); ?></textarea>
                             </div>
                             <div class="mwn-field-section">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::CHECKBOX, [
-                                    'label' => __('Show Button', MWN_TEXT_DOMAIN),
+                                    'label' => __('Show Button', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_button_status',
                                     'is_checked' => NotificationOptions::get_button_status(),
                                     'input_atts' => [
@@ -40,16 +40,16 @@ $notification_status = NotificationOptions::get_notification_status();
                                 ?>
                                 <div class="button-options" style="display:<?php echo NotificationOptions::get_button_status() ? 'block' : 'none' ?>">
                                     <div class="mwn-field-wrap">
-                                        <label for="notification_button_text"><?php _e('Button Title', MWN_TEXT_DOMAIN) ?></label>
+                                        <label for="notification_button_text"><?php _e('Button Title', MWNB_TEXT_DOMAIN) ?></label>
                                         <input type="text" name="notification_button_text" id="notification_button_text" data-preview-to=".notification-btn" value="<?php echo NotificationOptions::get_button_text() ?>">
                                     </div>
                                     <div class="mwn-field-wrap">
-                                        <label for="notification_button_link"><?php _e('Button Link', MWN_TEXT_DOMAIN) ?></label>
+                                        <label for="notification_button_link"><?php _e('Button Link', MWNB_TEXT_DOMAIN) ?></label>
                                         <input type="text" name="notification_button_link" dir="ltr" id="notification_button_link" data-preview-to=".notification-btn/href" value="<?php echo NotificationOptions::get_button_link() ?>">
                                     </div>
                                     <?php
                                     OptionsControl::renderControl(OptionsControl::CHECKBOX, [
-                                        'label' => __('Open link to new tab', MWN_TEXT_DOMAIN),
+                                        'label' => __('Open link to new tab', MWNB_TEXT_DOMAIN),
                                         'name' => 'notification_button_target_blank',
                                         'is_checked' => NotificationOptions::get_button_target_blank_status(),
                                     ]);
@@ -59,7 +59,7 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-section">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::CHECKBOX, [
-                                    'label' => __('Countdown Timer', MWN_TEXT_DOMAIN),
+                                    'label' => __('Countdown Timer', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_countdown_status',
                                     'is_checked' => NotificationOptions::get_countdown_status(),
                                     'input_atts' => [
@@ -76,12 +76,12 @@ $notification_status = NotificationOptions::get_notification_status();
                                         <?php
                                         $countdown_type = NotificationOptions::get_countdown_type();
                                         OptionsControl::renderControl(OptionsControl::SELECT,[
-                                            'label' => __('Style', MWN_TEXT_DOMAIN),
+                                            'label' => __('Style', MWNB_TEXT_DOMAIN),
                                             'name' => 'notification_countdown_style_type',
                                             'selected' => $countdown_type,
                                             'options' => [
-                                                1 => __('Style 1', MWN_TEXT_DOMAIN),
-                                                2 => __('Style 2', MWN_TEXT_DOMAIN)
+                                                1 => __('Style 1', MWNB_TEXT_DOMAIN),
+                                                2 => __('Style 2', MWNB_TEXT_DOMAIN)
                                             ],
                                             'class' => 'countdown-type',
                                             'input_atts' => [
@@ -92,24 +92,35 @@ $notification_status = NotificationOptions::get_notification_status();
                                     </div>
                                     <div class="countdown-style-type countdown-style-type-1 countdown-style-type-2">
                                         <div class="mwn-field-wrap">
-                                            <label for="notification_countdown_datetime"><?php _e('Countdown Datetime', MWN_TEXT_DOMAIN) ?></label>
+                                            <label for="notification_countdown_datetime"><?php _e('Countdown Datetime', MWNB_TEXT_DOMAIN) ?></label>
                                             <input type="datetime-local" name="notification_countdown_datetime" id="notification_countdown_datetime" class="countdown-input" value="<?php echo NotificationOptions::get_countdown_datetime() ?>">
                                         </div>
                                         <div class="mwn-field-wrap">
-                                            <label for="notification_countdown_end_text"><?php _e('Countdown End Text', MWN_TEXT_DOMAIN) ?></label>
+                                            <label for="notification_countdown_end_text"><?php _e('Countdown End Text', MWNB_TEXT_DOMAIN) ?></label>
                                             <input type="text" name="notification_countdown_end_text" id="notification_countdown_end_text" data-preview-to=".end-time-content" value="<?php echo NotificationOptions::get_countdown_end_text() ?>">
+                                        </div>
+                                    </div>
+                                    <div class="countdown-style-type countdown-style-type-1" style="display:<?php echo $countdown_type === 1 ? 'block' : 'none' ?>;">
+                                        <div class="mwn-field-wrap">
+                                            <label><?php _e('Labels', MWNB_TEXT_DOMAIN) ?></label>
+                                            <div class="mwn-fields-group-4">
+                                                <input type="text" name="countdown_days_label" id="countdown_days_label" data-preview-to=".tick-countdown > div > div:nth-child(1) .tick-label" placeholder="<?php echo __('Days', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_days_label() ?>">
+                                                <input type="text" name="countdown_hours_label" id="countdown_hours_label" data-preview-to=".tick-countdown > div > div:nth-child(2) .tick-label" placeholder="<?php echo __('Hours', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_hours_label() ?>">
+                                                <input type="text" name="countdown_minutes_label" id="countdown_minutes_label" data-preview-to=".tick-countdown > div > div:nth-child(3) .tick-label" placeholder="<?php echo __('Minutes', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_minutes_label() ?>">
+                                                <input type="text" name="countdown_seconds_label" id="countdown_seconds_label" data-preview-to=".tick-countdown > div > div:nth-child(4) .tick-label" placeholder="<?php echo __('Seconds', MWNB_TEXT_DOMAIN) ?>" value="<?php echo NotificationOptions::get_countdown_seconds_label() ?>">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="countdown-style-type countdown-style-type-2" style="display:<?php echo $countdown_type === 2 ? 'block' : 'none' ?>;">
                                         <div class="mwn-field-wrap">
-                                            <label for="notification_countdown_content"><?php _e('Countdown Timer Text', MWN_TEXT_DOMAIN) ?></label>
+                                            <label for="notification_countdown_content"><?php _e('Countdown Timer Text', MWNB_TEXT_DOMAIN) ?></label>
                                             <textarea name="notification_countdown_content" id="notification_countdown_content" data-preview-to=".notification-countdown.countdown-style-type-2/data-text"><?php echo NotificationOptions::get_countdown_content() ?></textarea>
                                             <div class="notification-countdown-codes">
-                                                <span class="default-text" data-text="<?php echo sprintf(__('%s Day %s Hour %s Minutes %s Seconds!', MWN_TEXT_DOMAIN), '{{d}}', '{{h}}', '{{m}}', '{{s}}') ?>"><?php _e('Default', MWN_TEXT_DOMAIN) ?></span>
-                                                <span data-text="{{d}}"><?php _e('Days', MWN_TEXT_DOMAIN) ?></span>
-                                                <span data-text="{{h}}"><?php _e('Hour', MWN_TEXT_DOMAIN) ?></span>
-                                                <span data-text="{{m}}"><?php _e('Minutes', MWN_TEXT_DOMAIN) ?></span>
-                                                <span data-text="{{s}}"><?php _e('Seconds', MWN_TEXT_DOMAIN) ?></span>
+                                                <span class="default-text" data-text="<?php echo sprintf(__('%s Day %s Hour %s Minutes %s Seconds!', MWNB_TEXT_DOMAIN), '{{d}}', '{{h}}', '{{m}}', '{{s}}') ?>"><?php _e('Default', MWNB_TEXT_DOMAIN) ?></span>
+                                                <span data-text="{{d}}"><?php _e('Days', MWNB_TEXT_DOMAIN) ?></span>
+                                                <span data-text="{{h}}"><?php _e('Hour', MWNB_TEXT_DOMAIN) ?></span>
+                                                <span data-text="{{m}}"><?php _e('Minutes', MWNB_TEXT_DOMAIN) ?></span>
+                                                <span data-text="{{s}}"><?php _e('Seconds', MWNB_TEXT_DOMAIN) ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -118,7 +129,7 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-section">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::CHECKBOX, [
-                                    'label' => __('Only Logged In User', MWN_TEXT_DOMAIN),
+                                    'label' => __('Only Logged In User', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_only_logged_in_user',
                                     'is_checked' => NotificationOptions::only_logged_in_user(),
                                 ]);
@@ -128,11 +139,11 @@ $notification_status = NotificationOptions::get_notification_status();
                                 <?php
                                 $only_woo_customer_status = NotificationOptions::only_woo_products_customer_status();
                                 OptionsControl::renderControl(OptionsControl::CHECKBOX, [
-                                    'label' => __('Woo Customer Products', MWN_TEXT_DOMAIN),
+                                    'label' => __('Woo Customer Products', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_only_woo_products_customer',
                                     'is_checked' => $only_woo_customer_status,
                                     'disabled' => !\mwn\app\Utility::isActiveWoo(),
-                                    'description' => __('Only shown to buyers of selected woocommerce products.', MWN_TEXT_DOMAIN),
+                                    'description' => __('Only shown to buyers of selected woocommerce products.', MWNB_TEXT_DOMAIN),
                                     'input_atts' => [
                                         'data-affected' => '.woo-customers-options',
                                     ]
@@ -142,7 +153,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                     <div class="woo-customers-options" style="display:<?php echo $only_woo_customer_status ? 'block' : 'none' ?>">
                                         <?php
                                         OptionsControl::renderControl(OptionsControl::SELECT,[
-                                            'label' => __('Products', MWN_TEXT_DOMAIN),
+                                            'label' => __('Products', MWNB_TEXT_DOMAIN),
                                             'name' => 'woo_products[]',
                                             'id' => 'woo_products',
                                             'selected' => NotificationOptions::get_woo_products(),
@@ -153,7 +164,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                         ?>
                                     </div>
                                 <?php else: ?>
-                                    <div class="error-box"><?php _e('Woocommerce is not active.', MWN_TEXT_DOMAIN) ?></div>
+                                    <div class="error-box"><?php _e('Woocommerce is not active.', MWNB_TEXT_DOMAIN) ?></div>
                                 <?php endif; ?>
                             </div>
                             <div class="mwn-field-section">
@@ -162,7 +173,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                 $include_page_type = NotificationOptions::get_include_pages_type();
 
                                 OptionsControl::renderControl(OptionsControl::CHECKBOX, [
-                                    'label' => __('Show in Special Pages', MWN_TEXT_DOMAIN),
+                                    'label' => __('Show in Special Pages', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_include_pages_status',
                                     'is_checked' => $has_include_pages,
                                     'input_atts' => [
@@ -176,11 +187,11 @@ $notification_status = NotificationOptions::get_notification_status();
                                         <div class="mwn-radio-items">
                                             <label>
                                                 <input type="radio" name="notification_include_pages_type" value="id" <?php echo $include_page_type === 'id' ? 'checked' : '' ?>>
-                                                <span><?php _e('Select Page', MWN_TEXT_DOMAIN) ?></span>
+                                                <span><?php _e('Select Page', MWNB_TEXT_DOMAIN) ?></span>
                                             </label>
                                             <label>
                                                 <input type="radio" name="notification_include_pages_type" value="url" <?php echo $include_page_type === 'url' ? 'checked' : '' ?>>
-                                                <span><?php _e('Page Url', MWN_TEXT_DOMAIN) ?></span>
+                                                <span><?php _e('Page Url', MWNB_TEXT_DOMAIN) ?></span>
                                             </label>
                                         </div>
                                     </div>
@@ -208,7 +219,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                         </div>
                                         <div class="radio-rel radio-rel-url" style="display:<?php echo $include_page_type === 'url' ? 'block' : 'none'?>">
                                             <textarea name="notification_include_pages_url" id="notification_include_pages_url" dir="ltr"><?php echo NotificationOptions::get_include_pages_url() ?></textarea>
-                                            <p class="description"><?php _e('Separate the addresses of the pages with an enter (each address on one line).', MWN_TEXT_DOMAIN) ?></p>
+                                            <p class="description"><?php _e('Separate the addresses of the pages with an enter (each address on one line).', MWNB_TEXT_DOMAIN) ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -219,7 +230,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                 $exclude_page_type = NotificationOptions::get_exclude_pages_type();
 
                                 OptionsControl::renderControl(OptionsControl::CHECKBOX, [
-                                    'label' => __('Hide in Special Pages', MWN_TEXT_DOMAIN),
+                                    'label' => __('Hide in Special Pages', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_exclude_pages_status',
                                     'is_checked' => $has_exclude_pages,
                                     'input_atts' => [
@@ -233,11 +244,11 @@ $notification_status = NotificationOptions::get_notification_status();
                                         <div class="mwn-radio-items">
                                             <label>
                                                 <input type="radio" name="notification_exclude_pages_type" value="id" <?php echo $exclude_page_type === 'id' ? 'checked' : '' ?>>
-                                                <span><?php _e('Select Page', MWN_TEXT_DOMAIN) ?></span>
+                                                <span><?php _e('Select Page', MWNB_TEXT_DOMAIN) ?></span>
                                             </label>
                                             <label>
                                                 <input type="radio" name="notification_exclude_pages_type" value="url" <?php echo $exclude_page_type === 'url' ? 'checked' : '' ?>>
-                                                <span><?php _e('Page Url', MWN_TEXT_DOMAIN) ?></span>
+                                                <span><?php _e('Page Url', MWNB_TEXT_DOMAIN) ?></span>
                                             </label>
                                         </div>
                                     </div>
@@ -265,7 +276,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                         </div>
                                         <div class="radio-rel radio-rel-url" style="display:<?php echo $exclude_page_type === 'url' ? 'block' : 'none' ?>">
                                             <textarea name="notification_exclude_pages_url" id="notification_exclude_pages_url" dir="ltr"><?php echo NotificationOptions::get_exclude_pages_url() ?></textarea>
-                                            <p class="description"><?php _e('Separate the addresses of the pages with an enter (each address on one line).', MWN_TEXT_DOMAIN) ?></p>
+                                            <p class="description"><?php _e('Separate the addresses of the pages with an enter (each address on one line).', MWNB_TEXT_DOMAIN) ?></p>
                                         </div>
                                     </div>
                                 </div>
@@ -279,12 +290,12 @@ $notification_status = NotificationOptions::get_notification_status();
                         <div class="mwn-style-options-list">
                             <div class="mwn-field-wrap">
                                 <?php OptionsControl::renderControl(OptionsControl::RANGE,[
-                                    'label' => __('Box Width', MWN_TEXT_DOMAIN),
+                                    'label' => __('Box Width', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_width',
                                     'min' => 80,
                                     'max' => 1280,
                                     'units' => ['%', 'px'],
-                                    'current_unit' => '%',
+                                    'current_unit' => NotificationOptions::getOption('notification_width_unit', '%'),
                                     'value' => NotificationOptions::getOption('notification_width', 100),
                                     'selectors' => [
                                         '.mwn-notification-bar-content' => 'width: {{VALUE}}{{UNIT}}'
@@ -294,12 +305,12 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-wrap">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::RANGE,[
-                                    'label' => __('Box Height', MWN_TEXT_DOMAIN),
+                                    'label' => __('Box Height', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_height',
                                     'min' => 45,
                                     'max' => 300,
                                     'units' => ['px'],
-                                    'current_unit' => 'px',
+                                    'current_unit' => NotificationOptions::getOption('notification_height_unit', 'px'),
                                     'value' => NotificationOptions::getOption('notification_height', 45),
                                     'selectors' => [
                                         '.mwn-notification-bar-content' => 'height: {{VALUE}}{{UNIT}}'
@@ -310,15 +321,15 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-wrap">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Text Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Text Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_text_color',
                                     'value' => NotificationOptions::getOption('notification_text_color', '#ffffff'),
                                     'selectors' => [
-                                        '.mwn-notification-bar-text' => 'color: {{VALUE}}'
+                                        '.mwn-notification-bar-box .mwn-notification-bar-text' => 'color: {{VALUE}}'
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::BACKGROUND_GROUP,[
-                                    'label' => __('Background', MWN_TEXT_DOMAIN),
+                                    'label' => __('Background', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_bg',
                                     'selectors' => [
                                         '.mwn-notification-bar-box'
@@ -339,7 +350,7 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-wrap button-options" style="display:<?php echo NotificationOptions::get_button_status() ? 'block' : 'none' ?>">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Button Text Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Button Text Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_button_text_color',
                                     'value' => NotificationOptions::getOption('notification_button_text_color', '#000000'),
                                     'selectors' => [
@@ -347,7 +358,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Button Background Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Button Background Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_button_bg_color',
                                     'value' => NotificationOptions::getOption('notification_button_bg_color', '#ffffff'),
                                     'selectors' => [
@@ -355,18 +366,18 @@ $notification_status = NotificationOptions::get_notification_status();
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::RANGE,[
-                                    'label' => __('Button Border Radius', MWN_TEXT_DOMAIN),
+                                    'label' => __('Button Border Radius', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_button_border_radius',
                                     'min' => 0,
                                     'max' => 300,
-                                    'current_unit' => 'px',
+                                    'current_unit' => NotificationOptions::getOption('notification_button_border_radius_unit', 'px'),
                                     'value' => NotificationOptions::getOption('notification_button_border_radius', 7),
                                     'selectors' => [
                                         '.notification-buttons a' => 'border-radius: {{VALUE}}{{UNIT}}'
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::DIMENSIONS,[
-                                    'label' => __('Button Padding', MWN_TEXT_DOMAIN),
+                                    'label' => __('Button Padding', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_button_padding',
                                     'min' => 0,
                                     'max' => 100,
@@ -388,7 +399,7 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-wrap">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Close Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Close Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_close_color',
                                     'value' => NotificationOptions::getOption('notification_close_color', '#ffffff'),
                                     'selectors' => [
@@ -396,7 +407,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Close Background Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Close Background Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_close_bg_color',
                                     'value' => NotificationOptions::getOption('notification_close_bg_color', '#686868'),
                                     'selectors' => [
@@ -408,7 +419,7 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-wrap countdown-options" style="display:<?php echo NotificationOptions::get_countdown_status() ? 'block' : 'none' ?>">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Timer Text Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Timer Text Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_timer_text_color',
                                     'value' => NotificationOptions::getOption('notification_timer_text_color', '#ffffff'),
                                     'selectors' => [
@@ -416,7 +427,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Timer Number Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Timer Number Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_timer_number_color',
                                     'value' => NotificationOptions::getOption('notification_timer_number_color', '#ffffff'),
                                     'selectors' => [
@@ -424,7 +435,7 @@ $notification_status = NotificationOptions::get_notification_status();
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::COLOR,[
-                                    'label' => __('Timer Number Background Color', MWN_TEXT_DOMAIN),
+                                    'label' => __('Timer Number Background Color', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_timer_number_bg_color',
                                     'value' => NotificationOptions::getOption('notification_timer_number_bg_color', '#333232'),
                                     'selectors' => [
@@ -432,15 +443,15 @@ $notification_status = NotificationOptions::get_notification_status();
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::RANGE,[
-                                    'label' => __('Timer Text Font Size', MWN_TEXT_DOMAIN),
+                                    'label' => __('Timer End Text Font Size', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_timer_font_size',
                                     'min' => 0,
                                     'max' => 400,
-                                    'current_unit' => 'px',
+                                    'current_unit' => NotificationOptions::getOption('notification_timer_font_size_unit', 'px'),
                                     'units' => ['px', 'rem', 'em'],
                                     'value' => NotificationOptions::getOption('notification_timer_font_size', 16),
                                     'selectors' => [
-                                        '.mwn-notification-bar-box .notification-countdown, .end-time-content' => 'font-size: {{VALUE}}{{UNIT}}'
+                                        '.mwn-notification-bar-box .end-time-content' => 'font-size: {{VALUE}}{{UNIT}}'
                                     ]
                                 ]);
                                 ?>
@@ -448,11 +459,11 @@ $notification_status = NotificationOptions::get_notification_status();
                             <div class="mwn-field-wrap">
                                 <?php
                                 OptionsControl::renderControl(OptionsControl::RANGE,[
-                                    'label' => __('Text Font Size', MWN_TEXT_DOMAIN),
+                                    'label' => __('Text Font Size', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_text_font_size',
                                     'min' => 0,
                                     'max' => 400,
-                                    'current_unit' => 'px',
+                                    'current_unit' => NotificationOptions::getOption('notification_text_font_size_unit', 'px'),
                                     'units' => ['px', 'rem', 'em'],
                                     'value' => NotificationOptions::getOption('notification_text_font_size', 16),
                                     'selectors' => [
@@ -460,11 +471,11 @@ $notification_status = NotificationOptions::get_notification_status();
                                     ]
                                 ]);
                                 OptionsControl::renderControl(OptionsControl::RANGE,[
-                                    'label' => __('Button Font Size', MWN_TEXT_DOMAIN),
+                                    'label' => __('Button Font Size', MWNB_TEXT_DOMAIN),
                                     'name' => 'notification_button_font_size',
                                     'min' => 0,
                                     'max' => 400,
-                                    'current_unit' => 'px',
+                                    'current_unit' => NotificationOptions::getOption('notification_button_font_size_unit', 'px'),
                                     'units' => ['px', 'rem', 'em'],
                                     'class' => 'button-options',
                                     'value' => NotificationOptions::getOption('notification_button_font_size', 16),
@@ -478,10 +489,10 @@ $notification_status = NotificationOptions::get_notification_status();
                     </div>
                     <!--------------------------- / END Style Tab ------------------------------->
                 </div>
-                <button type="submit" class="mwn-save" disabled><?php _e('Save Changes', MWN_TEXT_DOMAIN) ?></button>
+                <button type="submit" class="mwn-save" disabled><?php _e('Save Changes', MWNB_TEXT_DOMAIN) ?></button>
             </div>
             <div class="mwn-notification-bar-container">
-                <?php include_once MWN_VIEW_USER_PATH . 'notification-content.php' ?>
+                <?php include_once MWNB_VIEW_USER_PATH . 'notification-content.php' ?>
             </div>
         </div>
     </form>

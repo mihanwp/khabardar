@@ -184,14 +184,14 @@ class OptionsControl {
             <div class="mwn-inner-control option-select">
                 <?php $type_value = $values && isset($values['type']) ? esc_attr($values['type']) : ''; ?>
                 <select name="<?php echo esc_attr($field_name) ?>_type" class="background-type w100">
-                    <option <?php selected($type_value, 'simple') ?> value="simple"><?php _e('Simple', MWN_TEXT_DOMAIN) ?></option>
-                    <option <?php selected($type_value, 'gradient') ?> value="gradient"><?php _e('Gradient', MWN_TEXT_DOMAIN) ?></option>
-                    <option <?php selected($type_value, 'image') ?> value="image"><?php _e('Image', MWN_TEXT_DOMAIN) ?></option>
+                    <option <?php selected($type_value, 'simple') ?> value="simple"><?php _e('Simple', MWNB_TEXT_DOMAIN) ?></option>
+                    <option <?php selected($type_value, 'gradient') ?> value="gradient"><?php _e('Gradient', MWNB_TEXT_DOMAIN) ?></option>
+                    <option <?php selected($type_value, 'image') ?> value="image"><?php _e('Image', MWNB_TEXT_DOMAIN) ?></option>
                 </select>
                 <div class="mwn-bg-control-option all">
                     <?php
                     self::renderColorControl([
-                       'label' => __('Background Color', MWN_TEXT_DOMAIN),
+                       'label' => __('Background Color', MWNB_TEXT_DOMAIN),
                        'name' =>  esc_attr($field_name) . '_color',
                        'value' => $values && isset($values['color']) ? $values['color'] : '',
                        'is_inner' => true
@@ -201,13 +201,13 @@ class OptionsControl {
                 <div class="mwn-bg-control-option gradient-options" style="display:<?php echo $type_value === 'gradient' ? 'block' : 'none' ?>;">
                     <?php
                     self::renderColorControl([
-                        'label' => __('Background Secondary Color', MWN_TEXT_DOMAIN),
+                        'label' => __('Background Secondary Color', MWNB_TEXT_DOMAIN),
                         'name' =>  esc_attr($field_name) . '_color2',
                         'value' => $values && isset($values['color2']) ? $values['color2'] : '',
                         'is_inner' => true
                     ]);
                     self::renderRangeControl([
-                        'label' => __('Gradient Direction', MWN_TEXT_DOMAIN),
+                        'label' => __('Gradient Direction', MWNB_TEXT_DOMAIN),
                         'name' =>  esc_attr($field_name) . '_direction',
                         'value' => $values && isset($values['direction']) ? $values['direction'] : '',
                         'current_unit' => 'deg',
@@ -220,45 +220,45 @@ class OptionsControl {
                 </div>
                 <div class="mwn-bg-control-option image-options" style="display:<?php echo $type_value === 'image' ? 'block' : 'none' ?>;">
                     <div class="uploader-section">
-                        <label><?php _e('Image', MWN_TEXT_DOMAIN) ?></label>
+                        <label><?php _e('Image', MWNB_TEXT_DOMAIN) ?></label>
                         <div class="image-selector">
                             <input type="text" name="<?php echo esc_attr($field_name) . '_image' ?>" dir="ltr" value="<?php echo $values && isset($values['image']) ? esc_attr($values['image']) : '' ?>" data-setting="background_image">
-                            <button type="button" class="mwn-upload-button"><?php echo __('Select', MWN_TEXT_DOMAIN) ?></button>
+                            <button type="button" class="mwn-upload-button"><?php echo __('Select', MWNB_TEXT_DOMAIN) ?></button>
                         </div>
                     </div>
                     <div class="option-repeat option-select">
-                        <label for="<?php echo esc_attr($field_name) . '_repeat' ?>"><?php echo __('Background Repeat', MWN_TEXT_DOMAIN) ?></label>
+                        <label for="<?php echo esc_attr($field_name) . '_repeat' ?>"><?php echo __('Background Repeat', MWNB_TEXT_DOMAIN) ?></label>
                         <?php $repeat_value = $values && isset($values['repeat']) ? esc_attr($values['repeat']) : ''; ?>
                         <select name="<?php echo esc_attr($field_name) . '_repeat' ?>" data-setting="background_repeat">
-                            <option <?php selected($repeat_value, 'no-repeat') ?> value="no-repeat"><?php echo __('No Repeat', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($repeat_value, 'repeat') ?> value="repeat"><?php echo __('Repeat', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($repeat_value, 'repeat-x') ?> value="repeat-x"><?php echo __('X Repeat', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($repeat_value, 'repeat-y') ?> value="repeat-y"><?php echo __('Y Repeat', MWN_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($repeat_value, 'no-repeat') ?> value="no-repeat"><?php echo __('No Repeat', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($repeat_value, 'repeat') ?> value="repeat"><?php echo __('Repeat', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($repeat_value, 'repeat-x') ?> value="repeat-x"><?php echo __('X Repeat', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($repeat_value, 'repeat-y') ?> value="repeat-y"><?php echo __('Y Repeat', MWNB_TEXT_DOMAIN) ?></option>
                         </select>
                     </div>
                     <div class="option-size option-select">
-                        <label for="<?php echo esc_attr($field_name) . '_size' ?>"><?php echo __('Background Size', MWN_TEXT_DOMAIN) ?></label>
+                        <label for="<?php echo esc_attr($field_name) . '_size' ?>"><?php echo __('Background Size', MWNB_TEXT_DOMAIN) ?></label>
                         <?php $size_value = $values && isset($values['size']) ? esc_attr($values['size']) : ''; ?>
                         <select name="<?php echo esc_attr($field_name) . '_size' ?>" data-setting="background_size">
-                            <option <?php selected($size_value, 'auto') ?> value="auto"><?php echo __('Auto', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($size_value, 'contain') ?> value="contain"><?php echo __('Contain', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($size_value, 'cover') ?> value="cover"><?php echo __('Cover', MWN_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($size_value, 'auto') ?> value="auto"><?php echo __('Auto', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($size_value, 'contain') ?> value="contain"><?php echo __('Contain', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($size_value, 'cover') ?> value="cover"><?php echo __('Cover', MWNB_TEXT_DOMAIN) ?></option>
                         </select>
                     </div>
                     <div class="option-position option-select">
-                        <label for="<?php echo esc_attr($field_name) . '_position' ?>"><?php echo __('Background Position', MWN_TEXT_DOMAIN) ?></label>
+                        <label for="<?php echo esc_attr($field_name) . '_position' ?>"><?php echo __('Background Position', MWNB_TEXT_DOMAIN) ?></label>
                         <?php $position_value = $values && isset($values['position']) ? esc_attr($values['position']) : ''; ?>
                         <select name="<?php echo esc_attr($field_name) . '_position' ?>" data-setting="background_position">
-                            <option value=""><?php _e('Default', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'center center') ?> value="center center"><?php _e('Center Center', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'center left') ?> value="center left"><?php _e('Center Left', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'center right') ?> value="center right"><?php _e('Center Right', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'top center') ?> value="top center"><?php _e('Top Center', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'top left') ?> value="top left"><?php _e('Top Left', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'top right') ?> value="top right"><?php _e('Top Right', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'bottom center') ?> value="bottom center"><?php _e('Bottom Center', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'bottom left') ?> value="bottom left"><?php _e('Bottom Left', MWN_TEXT_DOMAIN) ?></option>
-                            <option <?php selected($position_value, 'bottom right') ?> value="bottom right"><?php _e('Bottom Right', MWN_TEXT_DOMAIN) ?></option>
+                            <option value=""><?php _e('Default', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'center center') ?> value="center center"><?php _e('Center Center', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'center left') ?> value="center left"><?php _e('Center Left', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'center right') ?> value="center right"><?php _e('Center Right', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'top center') ?> value="top center"><?php _e('Top Center', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'top left') ?> value="top left"><?php _e('Top Left', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'top right') ?> value="top right"><?php _e('Top Right', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'bottom center') ?> value="bottom center"><?php _e('Bottom Center', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'bottom left') ?> value="bottom left"><?php _e('Bottom Left', MWNB_TEXT_DOMAIN) ?></option>
+                            <option <?php selected($position_value, 'bottom right') ?> value="bottom right"><?php _e('Bottom Right', MWNB_TEXT_DOMAIN) ?></option>
                         </select>
                     </div>
                 </div>
