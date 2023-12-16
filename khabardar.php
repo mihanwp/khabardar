@@ -23,7 +23,7 @@ define('MWNB_VIEW_USER_PATH', MWNB_PATH . 'views/user/');
 define('MWNB_CSS_URL', MWNB_URL . 'assets/css/');
 define('MWNB_JS_URL', MWNB_URL . 'assets/js/');
 
-final class Mihanwp_Notification_Bar_Plugin{
+final class Khabardar_Plugin{
     private static $_instance;
     public static function get_instance(){
         if(!self::$_instance) {
@@ -63,4 +63,4 @@ final class Mihanwp_Notification_Bar_Plugin{
     }
 }
 
-Mihanwp_Notification_Bar_Plugin::get_instance();
+Khabardar_Plugin::get_instance();
