@@ -17,3 +17,6 @@ MihanWP Notification Bar is a WordPress plugin by [MihanWP](https://mihanwp.com 
 
 **Report Bugs & Contribution:**
 Do you want to report MihanWP Notification Bar bugs and contribute to plugin development?  Join us at [MihanWP Notification Bar Github Page](https://github.com/mihanwp/mihanwp-nofification-bar "MihanWP Notification Bar on GitHub").
+=======
+# khabardar
+Display notification bar and countdown at the top of your site
