@@ -1,10 +1,10 @@
 <?php
 /**
- * plugin name: MihanWP Notification Bar
+ * plugin name: Khabardar Notification Bar
  * description: Create notification bar in your website header.
  * version: 3.3.2
  * author: MihanWP
- * Text Domain: mihanwp-notification-bar
+ * Text Domain: khabardar-notification-bar
  * Domain Path: /languages
  * author uri: https://mihanwp.com
  * plugin uri: https://mihanwp.com/mihanwp-notification-bar/
@@ -18,7 +18,7 @@ define('MWNB_URL', plugin_dir_url(__FILE__));
 define('MWNB_BASENAME', basename(dirname(__FILE__)));
 define('MWNB_BASE_FILE', __FILE__);
 define('MWNB_LANG_PATH', basename(__DIR__) . DIRECTORY_SEPARATOR . 'languages');
-define('MWNB_TEXT_DOMAIN', 'mihanwp-notification-bar');
+define('MWNB_TEXT_DOMAIN', 'khabardar-notification-bar');
 define('MWNB_VIEW_USER_PATH', MWNB_PATH . 'views/user/');
 define('MWNB_CSS_URL', MWNB_URL . 'assets/css/');
 define('MWNB_JS_URL', MWNB_URL . 'assets/js/');

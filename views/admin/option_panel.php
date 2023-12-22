@@ -4,7 +4,7 @@ use mwn\app\OptionsControl;
 $notification_status = NotificationOptions::get_notification_status();
 ?>
 <div class="wrap">
-    <h2><?php _e('MihanWP Notification Bar', 'mihanwp-notification-bar'); ?></h2>
+    <h2><?php _e('Khabardar Notification Bar', MWNB_TEXT_DOMAIN); ?></h2>
     <form action="/" id="mwn-notification-builder-form">
         <div class="mwn-notification-bar-wrap">
             <div class="mwn-notification-bar-options">

@@ -38,19 +38,19 @@ class Assets
 
         $version = MWNB_VERSION;
         $main_js = self::get_js('main');
-        wp_enqueue_script('mihanwp_notification_bar_main', $main_js, ['jquery'], $version, true);
+        wp_enqueue_script('khabardar_notification_bar_main', $main_js, ['jquery'], $version, true);
         wp_enqueue_script('flip-clock', MWNB_JS_URL . 'flip-clock.min.js', null, $version, true);
         wp_enqueue_script('mwn-countdown', MWNB_JS_URL . 'countdown.js', null, $version, true);
         wp_localize_script('mwn-countdown', 'mwn_data', self::get_licalize_data());
     }
 
     static function load_option_panel_assets(){
-        if(isset($_GET['page']) && $_GET['page'] === 'mihanwp-notification-bar'){
+        if(isset($_GET['page']) && $_GET['page'] === AdminMenu::$menu_slug){
             $version = MWNB_VERSION;
             $option_panel_css = self::get_css('option_panel');
             $option_panel_js = self::get_js('option_panel');
 
-            wp_enqueue_style('mihanwp_notification_bar_option_panel', $option_panel_css, null, $version);
+            wp_enqueue_style('khabardar_notification_bar_option_panel', $option_panel_css, null, $version);
             wp_enqueue_style('wp-color-picker');
 
             wp_enqueue_style('select2', MWNB_CSS_URL . 'select2.min.css', null, $version);

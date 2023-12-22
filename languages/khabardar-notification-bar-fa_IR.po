@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: MihanWP Notification Bar\n"
-"POT-Creation-Date: 2023-10-23 11:17+0330\n"
-"PO-Revision-Date: 2023-10-23 11:18+0330\n"
+"Project-Id-Version: Khabardar Notification Bar\n"
+"POT-Creation-Date: 2023-12-22 19:37+0330\n"
+"PO-Revision-Date: 2023-12-22 19:37+0330\n"
 "Last-Translator: \n"
 "Language-Team: MihanWP\n"
 "Language: fa_IR\n"
@@ -13,15 +13,15 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
-"X-Poedit-WPHeader: mihanwp-notification-bar.php\n"
+"X-Poedit-WPHeader: khabardar.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;esc_attr__;esc_attr_e;esc_html__;esc_html_e\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: app/AdminMenu.php:6
-msgid "Notification Bar"
-msgstr "نوار اطلاع رسانی"
+#: app/AdminMenu.php:8
+msgid "Khabardar"
+msgstr "خبردار"
 
 #: app/Ajax.php:11 app/Assets.php:77 views/admin/option_panel.php:22
 msgid "Active"
@@ -193,8 +193,8 @@ msgstr "پایین راست"
 
 #. Plugin Name of the plugin/theme
 #: views/admin/option_panel.php:7
-msgid "MihanWP Notification Bar"
-msgstr "نوار اطلاع رسانی میهن وردپرس"
+msgid "Khabardar Notification Bar"
+msgstr "نوار اطلاع رسانی خبردار"
 
 #: views/admin/option_panel.php:12
 msgid "Test Notification In Top"
@@ -387,6 +387,9 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://mihanwp.com"
 msgstr ""
+
+#~ msgid "MihanWP Notification Bar"
+#~ msgstr "نوار اطلاع رسانی میهن وردپرس"
 
 #~ msgid "Day"
 #~ msgstr "روز"
